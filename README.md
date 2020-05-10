@@ -4,8 +4,9 @@
 ## Compile project
 
 ```bash
-mkdir kendryte-freertos-sdk/build && cd kendryte-freertos-sdk/build
-cmake .. -DPROJ=xpider -DTOOLCHAIN=/opt/riscv-toolchain/bin && make
+mkdir build && cd build
+cmake .. -DTOOLCHAIN=/opt/riscv-toolchain/bin
+make
 ```
 
 
@@ -14,5 +15,5 @@ cmake .. -DPROJ=xpider -DTOOLCHAIN=/opt/riscv-toolchain/bin && make
 For fast programming usin kflash ( https://github.com/kendryte/kflash.py )
 
 ```bash
-kflash -b 3000000 -B dan hello_world.bin
+kflash -b 3000000 -B dan xpider-fw-kendryte.bin
 ```
