@@ -1,0 +1,3 @@
+[submodule "kendryte-freertos-sdk"]
+	path = kendryte-freertos-sdk
+	url = https://github.com/AngelJMC/kendryte-freertos-sdk
