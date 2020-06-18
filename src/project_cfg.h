@@ -12,26 +12,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+#ifndef _PROJECT_CFG_H_
+#define _PROJECT_CFG_H_
+#include <pin_cfg.h>
 
-#include <devices.h>
-#include <stdio.h>
-#include <FreeRTOS.h>
-#include <task.h>
-#include "../kendryte-freertos-sdk/lib/bsp/include/sleep.h"
-#include "project_cfg.h"
-
-#include "led-control.h"
-
-
-int main()
+const fpioa_cfg_t g_fpioa_cfg =
 {
+    .version = PIN_CFG_VERSION,
+    .functions_count = 3,
+    .functions =
+    {
+        {12, FUNC_GPIOHS1},
+        {13, FUNC_GPIOHS2},
+        {14, FUNC_GPIOHS3}
+    }
+};
 
-    ledControl_init(  );
-
-    
-    xTaskCreate(ledControl_task, "ledControl", 512, NULL, 1, NULL);
-
-    for(;;);
-
-    return 0;
-}
+#endif
