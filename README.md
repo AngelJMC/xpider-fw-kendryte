@@ -5,7 +5,7 @@
 
 ```bash
 mkdir build && cd build
-cmake .. -DTOOLCHAIN=/opt/riscv-toolchain/bin
+cmake .. -DTOOLCHAIN=/opt/kendryte-toolchain/bin 
 make
 ```
 
